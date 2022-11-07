@@ -1,0 +1,210 @@
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol
+      *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: revert;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+textarea {
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  line-break: after-white-space;
+  -webkit-line-break: after-white-space;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: bold;
+}
+
+*,
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+:root {
+  --darkCyan: #3c8067;
+  --cream: #f2ebe3;
+  --veryDarkBlue: #1c232b;
+  --darkGrayishBlue: #6c7289;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--cream);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deckstop {
+  display: none;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+section .card {
+  background-color: var(--white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+section .card .padding {
+  padding: 1.5rem;
+}
+
+section .card .padding .perfume {
+  color: var(--darkGrayishBlue);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.313rem;
+}
+
+section .card .padding h1 {
+  padding: 1.25rem 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: left;
+}
+
+section .card .padding p {
+  color: var(--darkGrayishBlue);
+  font-weight: 500;
+  line-height: 23px;
+  font-size: 14px;
+  padding-bottom: 1.25rem;
+  text-align: left;
+}
+
+section .card .padding .price {
+  color: var(--darkCyan);
+  font-weight: bold;
+  font-family: "Fraunces", sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+section .card .padding .priceBarre {
+  color: var(--darkGrayishBlue);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 23px;
+}
+
+section .card button {
+  display: block;
+  background-color: var(--darkCyan);
+  border-radius: 8px;
+  font-size: 14px;
+  width: 295px;
+  height: 48px;
+  text-align: center;
+  color: var(--white);
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background-color 500ms ease-in-out;
+}
+
+section .card button:hover {
+  background-color: #1a4032;
+}
+
+section .card .padding button .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .card .padding button .container div {
+  padding-right: 11px;
+}
+
+section .card .padding button .container img {
+  width: 14.39px;
+  height: 16px;
+}
+@media (min-width: 1440px) {
+  .card {
+    display: flex;
+    width: 600px;
+  }
+
+  .card .mobile {
+    display: none;
+  }
+
+  .card .deckstop {
+    display: block;
+    height: 450px;
+  }
+  section .card .padding {
+    padding: 2rem;
+  }
+
+  .card .padding button {
+    width: 236px;
+  }
+}
